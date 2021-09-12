@@ -1,6 +1,11 @@
 body {
-  background-color: #7DF971;
+  background-color: #FFDE03;
   font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 22px;
 }
 
 hr {
@@ -14,6 +19,10 @@ h1 {
   font-size: 3.4rem;;
 }
 
+.pointing {
+  font-size: 3rem;
+}
+
 .quote {
   font-size: 1.4rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -22,12 +31,19 @@ h1 {
 .profile {
   border-radius: 50%;
   width: 72px;
+  height: 72px;
 }
+
+  .profile-sm {
+    width: 48px;
+    height: 48px;
+  }
 
 
 .list-group a {
   color: #000;
   text-decoration: none;
+  font-size: 1.2rem;
  }
 
 .border-top {

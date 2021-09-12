@@ -15,15 +15,12 @@
     <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
   
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
+    <link rel="canonical" href="https://covidreligiousexemption.com">
 
-    
 
     <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/starter-template.css" rel="stylesheet">
-
-
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/starter-template.css" rel="stylesheet">
 
     
     <!-- Custom styles for this template -->
@@ -33,6 +30,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-00QT72PDPS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-00QT72PDPS');
+    </script>
 
   </head>
   <body>
@@ -44,13 +51,13 @@
 
     <header>
       <div class="container">
-        <div class="mt-5 pt-5 ">
-          <div class="d-flex pt-5 position-relative">
+        <div class="mt-4 py-5">
+          <div class="d-flex pt-5 position-relative align-items-center">
             <div class="col-5 offset-2 g-4">
-              <h1 class="fw-bold pt-4 mt-3">Covid Religious Exemption Letter Generator</h1>
+              <h1 class="fw-bold pt-2">Covid Religious Exemption Letter Generator</h1>
             </div>
-            <div class="col-4 pb-5">
-              <img src="assets/Christian_cross.svg" style="width: 12.5rem;" alt="Christian Cross">
+            <div class="col-4">
+              <img src="assets/Christian_cross.svg" style="width: 14.5rem;" alt="Christian Cross">
             </div>
           </div>
         </div>
@@ -60,20 +67,20 @@
 
     <main>
           
-      <p class="fs-5 col-md-8 mx-auto text-center mt-4 mb-0 pt-4 fw-bold">See if a <u>free</u> religious exception letter to covid mandates is right for you</p>
-      <p class="fs-5 col-md-8 mx-auto text-center mb-4 py-4">Featuring guidance from leading pastors</p>
+      <p class="fs-5 col-md-8 mx-auto text-center mt-2 mb-0 pt-4 fw-bold"><span class="d-inline-block bg-white px-4 py-3" style="border-radius: 36px;">See if a religious exception letter to Covid-19 mandates is right for you</span></p>
+      <p class="fs-5 col-md-8 mx-auto text-center mb-4 mt-3 py-4">🇺🇸 Featuring guidance from leading pastors 🇺🇸</p>
       
       <div class="container pb-4">
         <div class="row">
-          <div class="col-9 mx-auto">
+          <div class="col-10 mx-auto">
             <div class="row">
               <div class="col d-flex align-items-center">
                 <img src="assets/jeremy-johnson.jpg" alt="Pastor Jeremy Johnson, lead pastor" class="img-fluid profile" />
-                <p class="px-4 mb-0"><strong>Pastor Jeremy Johnson</strong><br/>Lead pastor, North Point Church</p>
+                <p class="px-4 mb-0"><strong>Pastor Jeremy Johnson</strong><br/>Lead pastor, North Point Church, Missouri</p>
               </div>
               <div class="col d-flex align-items-center">
-                <img src="assets/jeremy-johnson.jpg" alt="Pastor Jeremy Johnson, lead pastor" class="img-fluid profile" />
-                <p class="px-4 mb-0"><strong>Pastor Jeremy Johnson</strong><br/>Lead pastor, North Point Church</p>
+                <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile" />
+                <p class="px-4 mb-0"><strong>Pastor Robert Jeffress</strong><br/>Lead pastor, First Baptist Church, Texas<br/>Fox News Contributor</p>
               </div>
               <div class="col d-flex align-items-center">
                 <img src="assets/jeremy-johnson.jpg" alt="Pastor Jeremy Johnson, lead pastor" class="img-fluid profile" />
@@ -87,7 +94,8 @@
       
       <div class="d-flex">
         <div class="col-md-5 mx-auto">
-
+          
+          <!-- CARD -->
           <div class="card w-100">
             <div class="card-body">
               <h5 class="card-title">Are you requesting an exemption to Covid-19 vaccination requirements due to a sincerly held religious belief?</h5>
@@ -96,7 +104,11 @@
               <li class="list-group-item">
                 <a href="#" class="d-block" onclick="
                   $('#question-two').removeClass('d-none'); 
-                  $('#question-one-yes').removeClass('d-none'); 
+                  $('#question-one-yes').removeClass('d-none');
+
+                  $('#question-one-no').addClass('d-none'); 
+                  $('#question-one-answer-two').addClass('d-none');
+                  $('#continue-two').addClass('d-none'); 
                   return false;
                   "
                 >
@@ -108,21 +120,51 @@
               </li>
               <li class="list-group-item">
                 <a href="#" class="d-block" onclick="
-                  $('#question-one-answer-one').removeClass('d-none');
+                  $('#question-one-answer-two').removeClass('d-none');
+                  $('#question-one-no').removeClass('d-none'); 
+                  $('#continue-two').removeClass('d-none'); 
+                  $('#question-two').addClass('d-none');
                   return false;
                   "
-                >No</a>
+                ><span class="checkmark mr-2 d-none" id="question-one-no">
+                  <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                </span>
+                No, I just want an exemption</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#" class="d-block" onclick="
+                  $('#question-one-answer-three').removeClass('d-none');
+                  return false;
+                  "
+                >What counts as a "sincerely held belief"?</a>
               </li>
             </ul>
 
-            <div class="card-body d-none" id="question-one-answer-one">
-              <p>This website is only for people who are seeking a sincere religious exception to Covid-19 vaccination requirements required by many state, federal, and private institutions and organizations. If you are worried about the saftey and validity of the vaccine, please consult these important references.</p>
+            <div class="card-body px-4 mx-4  d-none" id="question-one-answer-two">
+              <span class="pointing">👇</span>
+              <p><strong>What sincrely held belief means in the law</strong><br/>This website is only for people who are seeking a sincere religious exception to Covid-19 vaccination requirements mandated by many state, federal, and private institutions and organizations. If you are worried about the saftey and validity of the vaccine, please consult these references trusted by many churches:</p>
+              <ul>
+                <li>
+                  <p><a href="https://www.facebook.com/watch/?v=154247513123103" target="_new">Video interview with Pastor Robert Jeffers</a></p>
+                </li>
+                <li>
+                  <p><a href="https://www.ky3.com/2021/07/21/missouri-church-leaders-implore-congregants-get-vaccinated/" target="_new">Missouri Pastor Jeremy Johnson explains why the vaccine is safe</a></p>
+                </li>
+
+                
+              </ul>
             </div>
 
           </div>
 
+           <!-- NEXT BUTTON -->
+
+           <div class="d-flex w-100 justify-content-center pt-5 d-none" id="continue-two">
+            <a href="#question-two" class="btn btn-dark" onclick="$('#question-two').removeClass('d-none'); $(this).parent().addClass('d-none'); return fales;">Continue anyway</a>
+          </div>
 
 
+          <!-- CARD -->
           <div class="card w-100 mt-5 d-none" id="question-two">
             <div class="card-body">
               <h5 class="card-title">Would you get the vaccine if the FDA approved it for general, non-emergency use?</h5>
@@ -133,7 +175,8 @@
                 <a href="#" class="d-block" onclick="
                   $('#question-two-answer-one').removeClass('d-none');
                   $('#question-two-yes').removeClass('d-none');
-                  $('#question-three').removeClass('d-none'); return false;
+                  $('#continue-three').removeClass('d-none');
+                  return false;
                   "
                 >
                   <span class="checkmark mr-2 d-none" id="question-two-yes">
@@ -143,63 +186,147 @@
                 </a>
               </li>
               <li class="list-group-item">
-                <a href="#">No</a>
+                <a href="#" class="d-block" onclick="
+                  $('#question-three').removeClass('d-none');
+                  $('#question-two-no').removeClass('d-none');
+                  return false;
+                "><span class="checkmark mr-2 d-none" id="question-two-no">
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  No</a>
               </li>
             </ul>
 
-            <div class="card-body d-none" id="question-two-answer-one">
-              <p><strong>You should know</strong><br/>The FDA recently <strong>has approved</strong> the Pfizer Covid vaccine for non-emergency use. <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/full-fda-approval-of-a-covid-19-vaccine-what-you-should-know" target="_new">Read about the safety of this vaccine</a> from the Johns Hopkins Medical Center, a source trusted by leading religious figures and that cited and trusted by Fox News, Donald Trump, and many other trusted figures.</p>
+            <div class="card-body px-4 mx-4 pb-5 d-none" id="question-two-answer-one">
+              <span class="pointing">👇</span>
+              <p><strong>You should know</strong><br/>The FDA <strong>approved</strong> the Pfizer-BioNTech COVID-19 Vaccine for non-emergency use on August 23, 2021. <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/full-fda-approval-of-a-covid-19-vaccine-what-you-should-know" target="_new">Read about the FDA approval and what it shows about the safety of this vaccine</a> from the Johns Hopkins Medical Center, a source trusted by leading religious figures, Fox News, and Donald Trump.</p>
               <button type="button" class="btn btn-primary">Find vaccines near me</button>
             </div>
 
           </div>
 
+          <!-- NEXT BUTTON -->
 
-          <div class="card w-100 mt-5  d-none" id="question-three">
+          <div class="d-flex w-100 justify-content-center pt-5 d-none" id="continue-three">
+            <a href="#question-three" class="btn btn-dark" onclick="$('#question-three').removeClass('d-none'); $(this).parent().addClass('d-none'); return fales;">Continue anyway</a>
+          </div>
+
+
+          <!-- CARD -->
+          <div class="card w-100 mt-5 d-none" id="question-three">
             <div class="card-body">
-              <h5 class="card-title">Do you distrust the science behind these vaccines?</h5>
+              <h5 class="card-title">Do you trust the science behind these vaccines?</h5>
               
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
                 <a href="#" class="d-block" onclick="
-                  $('#question-three-answer-one').removeClass('d-none'); 
+                  $('#question-four').removeClass('d-none');
                   $('#question-three-yes').removeClass('d-none');
-                  $('#question-four').removeClass('d-none'); return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" id="question-three-yes">
+                  return false;
+                "><span class="checkmark mr-2 d-none" id="question-three-yes">
                     <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
                   </span>
-                  Yes
+                  Yes, I want an exemption for another reason</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#" class="d-block" onclick="
+                  $('#question-three-answer-one').removeClass('d-none'); 
+                  $('#question-three-no-a').removeClass('d-none');
+                  $('#question-four').removeClass('d-none'); 
+                  return false;
+                  "
+                >
+                  <span class="checkmark mr-2 d-none" id="question-three-no-a">
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  No, I believe they were developed too quickly
                 </a>
               </li>
               <li class="list-group-item">
-                <a href="#">No</a>
+                <a href="#" class="d-block" onclick="
+                  $('#question-three-answer-two').removeClass('d-none'); 
+                  $('#question-three-no-a').removeClass('d-none');
+                  $('#question-four').removeClass('d-none'); return false;
+                  "
+                >
+                  <span class="checkmark mr-2 d-none" id="question-three-no-a">
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  No, I heard they were developed using aborted fetuses
+                </a>
               </li>
+              <li class="list-group-item">
+                <a href="#" class="d-block" onclick="
+                  $('#question-three-answer-three').removeClass('d-none'); 
+                  $('#question-three-no-b').removeClass('d-none');
+                  $('#question-four').removeClass('d-none'); return false;
+                  "
+                >
+                  <span class="checkmark mr-2 d-none" id="question-three-no-b">
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  No, I heard the virus was man-made
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a href="#" class="d-block" onclick="
+                  $('#question-three-answer-two').removeClass('d-none'); 
+                  $('#question-three-no-c').removeClass('d-none');
+                  $('#question-four').removeClass('d-none'); return false;
+                  "
+                >
+                  <span class="checkmark mr-2 d-none" id="question-three-no-c">
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  No, I generally distrust science
+                </a>
+              </li>
+              
             </ul>
 
-            <div class="card-body d-none" id="question-three-answer-one">
+            <div class="card-body px-4 mx-4 d-none" id="question-three-answer-one">
+              <span class="pointing">👇</span>
               <p><strong>You should know</strong><br/>The church believes that science and religious at <em>not</em> at odds. If you are not yet sure of the safety and science behind the vaccines, you should consult the following trusted resources:</p>
+              <p class="quote px-4 pt-3">“[Some churches] have created a false dichotomy between faith and science. The truth is there is no conflict between true faith and true science. God uses science to bring about his purpose.”</p>
+              <div class="d-flex px-4 small mb-4 align-items-start">
+                <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                <p class="px-4 small mb-0"><strong>Pastor Robert Jeffress</strong><br/><span class="text-secondary">Lead pastor, First Baptist Church, Texas<br/>Faith advisor to Donald Trump and Fox News Contributor</span></p>
+              </div>
               <ul>
                 <li><a href="#">Source</a></li>
               </ul>
-              <p class="quote">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
-              <p>- Pastor Jeremy Johnson, lead pastor of North Point Church, one of Missouri’s largest churches</p>
+            </div>
+
+            <div class="card-body px-4 mx-4 d-none" id="question-three-answer-two">
+              <hr>
+              <p><strong>You should know</strong><br/>While it is true that a cell line derived from an elective abortion in 1972 has been used in the development of vaccines, <strong>no cells from aborted fetuses were used in the production of the Pfizer and Moderna vaccine</strong>. The church believes it is important to save human lives, and taking the vaccine is a morally acceptable and in fact important step to take to save human lives.</p>
+              <p class="quote px-4 pt-3">“We talk about life inside the womb being a gift from God. Well, life outside the womb is a gift from God, too… We need to do everything we can to protect the life God has given us.”</p>
+              <div class="d-flex px-4 small mb-4 align-items-start">
+                <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                <p class="px-4 small mb-0"><strong>Pastor Robert Jeffress</strong><br/><span class="text-secondary">Lead pastor, First Baptist Church, Texas<br/>Faith advisor to Donald Trump and Fox News Contributor</span></p>
+              </div>
+              <p class="quote px-4 pt-3">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
+              <div class="d-flex px-4 small mb-4 align-items-start">
+                <img src="assets/jeremy-johnson.jpg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                <p class="px-4 small mb-0"><strong>Pastor Jeremy Johnson</strong><br/><span class="text-secondary">Lead pastor of North Point Church, Missouri</span></p>
+              </div>
             </div>
 
           </div>
 
 
+          <!-- CARD -->
           <div class="card w-100 mt-5 d-none" id="question-four">
             <div class="card-body">
-              <h5 class="card-title">I'm worried the vaccines were developed using cells from an abortion</h5>
+              <h5 class="card-title">Do believe God will protect you from the virus, therfore you don't need the vaccine?</h5>
               
             </div>
             <ul class="list-group list-group-flush">
+            
               <li class="list-group-item">
                 <a href="#" class="d-block" onclick="
-                  $('#question-four-answer-one').removeClass('d-none');
+                  $('#question-four-answer-one').removeClass('d-none'); 
                   $('#question-four-yes').removeClass('d-none');
                   $('#question-five').removeClass('d-none'); return false;
                   "
@@ -207,6 +334,57 @@
                   <span class="checkmark mr-2 d-none" id="question-four-yes">
                     <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
                   </span>
+                Yes, I believe God will protect me
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a href="#" class="d-block" onclick="
+                  $('#question-four-answer-two').removeClass('d-none'); 
+                  $('#question-four-no').removeClass('d-none');
+                  $('#question-five').removeClass('d-none'); return false;
+                  "
+                >
+                  <span class="checkmark mr-2 d-none" id="question-four-no">
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  No, that's not why I want an excemption
+                </a>
+              </li>
+              
+            </ul>
+
+            <div class="card-body px-4 mx-4 d-none" id="question-three-answer-one">
+              <span class="pointing">👇</span>
+              <p><strong>You should know</strong><br/>Religious leaders from every denomination believe God gave you an intellect to protect yourself and others in your community. You shouldn’t stop using the tools God gave you.</p>
+              <p class="quote px-4 pt-3">“God gave us both a sense of God's love and care and compassion, but he also gave us the brain and the opportunity to understand God's creation, which is nature, which includes things like viruses. And I think God expected us to use those gifts to understand how to protect ourselves and others from disease. If we have the opportunity to heal through medicine, I think God expects us to do that and not count on some supernatural intervention to come and save us when he's already given us the chance to be saved by other means.”</p>
+              <div class="d-flex px-4 small mb-4 align-items-start">
+                <img src="assets/francis-collins.jpeg" alt="Francis Collins" class="img-fluid profile profile-sm" />
+                <p class="px-4 small mb-0"><strong>Francis Collins</strong><br/><span class="text-secondary">Francis Collins, director of the National Institutes of Health<br/>Devout Christian, appointed by Donald Trump</span></p>
+              </div>
+              <ul>
+                <li><a href="#">Source</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+
+          <!-- CARD -->
+          <div class="card w-100 mt-5 d-none" id="question-five">
+            <div class="card-body">
+              <h5 class="card-title">Do you believe the Biden administration is inhibiting your God-given freedoms by requiring you be vaccinated?</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="#" class="d-block" onclick="
+                  $('#question-five-answer-one').removeClass('d-none');
+                  $('#question-five-yes').removeClass('d-none');
+                  $('#question-six').removeClass('d-none'); return false;
+                  "
+                >
+                  <span class="checkmark mr-2" id="question-four-yes">
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
                   Yes
                 </a>
               </li>
@@ -215,22 +393,60 @@
               </li>
             </ul>
 
-            <div class="card-body d-none" id="question-four-answer-one">
-              <p><strong>You should know</strong><br/>A cell line derived from an elective abortion in 1972 is used often in biotechnology but is <strong>not</strong> used in the production of the Pfizer and Moderna vaccine</p>
+            <div class="card-body  px-4 mx-4" id="question-five-answer-one">
+              <p><strong>You should know</strong><br/>Answer</p>
              
             </div>
 
           </div>
-          
+
+
+           <!-- CARD -->
+           <div class="card w-100 mt-5 d-none" id="question-six">
+            <div class="card-body">
+              <h5 class="card-title">Do you believe getting vaccinated is a personal decision?</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="#" class="d-block" onclick="
+                  $('#question-six-answer-one').removeClass('d-none');
+                  $('#question-six-yes').removeClass('d-none');
+                  $('#question-seven').removeClass('d-none'); return false;
+                  "
+                >
+                  <span class="checkmark mr-2" id="question-four-yes">
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  Yes, it's a personal choice
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a href="#">No, I need to take the community into consideration</a>
+              </li>
+            </ul>
+
+            <div class="card-body  px-4 mx-4" id="question-six-answer-one">
+              <p><strong>You should know</strong><br/>When dealing with an outbreak of an infectious disease, it isn't only about you. There's a societal responsibility that we all have. </p>
+              <p class="quote px-4 pt-3">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
+              <div class="d-flex px-4 small mb-4 align-items-start">
+                <img src="assets/jeremy-johnson.jpg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                <p class="px-4 small mb-0"><strong>Pastor Jeremy Johnson</strong><br/><span class="text-secondary">Lead pastor of North Point Church, Missouri</span></p>
+              </div>
+            </div>
+
+            
+
+          </div>
 
 
 
-          
-          
+
+         
           
 
-        </div>
-      </div>
+
+        </div> <!-- END CARDS INNER WRAPPER -->
+      </div> <!-- END CARDS WRAPPER -->
 
       <p class="text-center mt-5 text-secondary">Select an answer above to continue</p>
 

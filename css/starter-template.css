@@ -1,0 +1,48 @@
+body {
+  background-color: #7DF971;
+  font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+  background-color: #fff;
+  opacity: 1;
+}
+
+
+h1 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 3.4rem;;
+}
+
+.quote {
+  font-size: 1.4rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 72px;
+}
+
+
+.list-group a {
+  color: #000;
+  text-decoration: none;
+ }
+
+.border-top {
+  border-top: 4px solid #000!important;
+}
+
+.border-bottom {
+  border-bottom: 4px solid #000!important;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #00d54b;
+  border-color: #00d54b;
+}

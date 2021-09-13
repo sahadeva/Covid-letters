@@ -40,11 +40,16 @@ h1 {
   }
 
 
-.list-group a {
+.list-group {
   color: #000;
   text-decoration: none;
   font-size: 1.2rem;
  }
+
+  .list-group-item:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
 
 .border-top {
   border-top: 4px solid #000!important;

@@ -68,7 +68,7 @@
     <main>
           
       <p class="fs-5 col-md-8 mx-auto text-center mt-2 mb-0 pt-4 fw-bold"><span class="d-inline-block bg-white px-4 py-3" style="border-radius: 36px;">See if a religious exception to Covid-19 vaccine requirements is right for you</span></p>
-      <p class="fs-5 col-md-8 mx-auto text-center mb-4 mt-3 py-4">🇺🇸 Featuring guidance from leading pastors 🇺🇸</p>
+      <p class="fs-5 col-md-8 mx-auto text-center mb-4 mt-3 py-4">🇺🇸 Featuring guidance from pastors loved by all 🇺🇸</p>
       
       <div class="container pb-4">
         <div class="row">
@@ -89,400 +89,578 @@
             </div>
           </div>
         </div>
-        <p class="text-center pt-5"><span class="d-inline-block rounded bg-white px-2 py-1"><strong>👇 Get started</strong></span></p>
+        <p class="text-center pt-5 font-weight-bold"><span class="d-inline-block px-2 py-1"><span style="font-size: 36px;">👇</span><br/>Get started by answering these questions</span></span></p>
       </div>
       
       <div class="d-flex">
         <div class="col-md-5 mx-auto">
           
-          <!-- CARD -->
-          <div class="card w-100" id="question-one">
-            <div class="card-body">
-              <h5 class="card-title">Are you requesting an exemption to Covid-19 vaccination requirements due to a sincerly held religious belief?</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item" onclick="
+          <!-- CARD 1 -->
+          <div class="card-wrapper">
+            <div class="card w-100" id="question-one">
+              <div class="card-body">
+                <h4 class="card-title">Are you requesting an exemption to Covid-19 vaccination requirements due to a sincerly held religious belief?</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="card1-a" onclick="
 
-                  // Turn on next card
-                  $(this).parent().parent().parent().next('.card').removeClass('d-none'); 
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none');
 
-                  // Turn off all answers in card
-                  $(this).parent().parent().parent().children('.answer').addClass('d-none');
-
-                  // Turn off all checkmarks in card
-                  $(this).parent().children().addClass('d-none');
-
-                  // Turn on this answer
-                  $('#question-one-answer-two').removeClass('d-none');
-
-                  // Add checkmark to this answer
-                  $(this).children().removeClass('d-none');
-
-                  return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" >
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  Yes
-              </li>
-              <li class="list-group-item" onclick="
-
-                  // Turn on next card
-                  $(this).parent().next().removeClass('d-none'); 
-
-                  // Turn off all answers in card
-                  $(this).parent().parent().children(.answer).addClass('d-none');
-
-                  // Turn off all checkmarks in card
-                  $(this).parent().children().addClass('d-none');
-
-                  // Turn on this answer
-                  $('question-one-answer-two').removeClass('d-none');
-
-                  // Add checkmark to this answer
-                  $(this).children().removeClass('d-none');
-
-
-                  // Remove checkmark from sibling answers
-                  $(this).children().removeClass('d-none');
-
-                  // Show answer
-                  $('#question-one-answer-two').addClass('d-none');
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
                   
-              /* 
-                  $('#question-one-answer-two').removeClass('d-none');
-                  $(this).children().removeClass('d-none');
-                  $('#continue-two').removeClass('d-none'); 
-                  $('#question-two').addClass('d-none');
-              */ 
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
 
-                  return false;
-              
-                  "
-                ><span class="checkmark mr-2 d-none" >
-                  <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                </span>
-                No, I just want an exemption
-              </li>
-              <li class="list-group-item" onclick="
-                  $('#question-one-answer-three').removeClass('d-none');
-                  return false;
-                  "
-                >What counts as a "sincerely held belief"?
-              </li>
-            </ul>
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
 
-            <div class="answer card-body px-4 mx-4 d-none" id="question-one-answer-two">
-              <span class="pointing">👇</span>
-              <p><strong>What sincrely held belief means in the law</strong><br/>This website is only for people who are seeking a sincere religious exception to Covid-19 vaccination requirements mandated by many state, federal, and private institutions and organizations. If you are worried about the saftey and validity of the vaccine, please consult these references trusted by many churches:</p>
-              <ul>
-                <li>
-                  <p><a href="https://www.facebook.com/watch/?v=154247513123103" target="_new">Video interview with Pastor Robert Jeffers</a></p>
+                    return false;
+                    "
+                  >
+                    <span class="checkmark mr-2 d-none" >
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    Yes
                 </li>
-                <li>
-                  <p><a href="https://www.ky3.com/2021/07/21/missouri-church-leaders-implore-congregants-get-vaccinated/" target="_new">Missouri Pastor Jeremy Johnson explains why the vaccine is safe</a></p>
-                </li>
-              </ul>
-            </div>
+                <li class="list-group-item" onclick="
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none');
 
-            <div class="answer card-body px-4 mx-4 d-none" id="question-one-answer-three">
-              <span class="pointing">👇</span>
-              <p><strong>A sincrely held belief is defined in federal law as ...</p>
-              <ul>
-                <li>
-                  <p><a href="https://www.facebook.com/watch/?v=154247513123103" target="_new">Video interview with Pastor Robert Jeffers</a></p>
-                </li>
-                <li>
-                  <p><a href="https://www.ky3.com/2021/07/21/missouri-church-leaders-implore-congregants-get-vaccinated/" target="_new">Missouri Pastor Jeremy Johnson explains why the vaccine is safe</a></p>
-                </li>
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
 
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                    // Turn on this answer
+                    $('#question-one-answer-two').removeClass('d-none');
+
+                    return false;
                 
+                    "
+                  ><span class="checkmark mr-2 d-none" >
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  No, I just want an exemption
+                </li>
+                <li class="list-group-item" onclick="
+
+                    // WITH CONTINUE BUTTON 
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none');
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                    // Show continue button
+                    $(this).parent().parent().parent().find('.continue').removeClass('d-none');
+
+                    // Turn on this answer
+                    $('#question-one-answer-three').removeClass('d-none');
+
+                    return false;
+                    "
+                  ><span class="checkmark mr-2 d-none" >
+                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                  </span>
+                  What counts as a "sincerely held belief"?
+                </li>
               </ul>
-            </div>
 
-          </div>
-
-           <!-- NEXT BUTTON -->
-
-           <div class="d-flex w-100 justify-content-center pt-5 d-none" id="continue-two">
-            <a href="#question-two" class="btn btn-dark" onclick="$('#question-two').removeClass('d-none'); $(this).parent().addClass('d-none'); return fales;">Continue anyway</a>
-          </div>
-
-
-          <!-- CARD -->
-          <div class="card w-100 mt-5 d-none" id="question-two">
-            <div class="card-body">
-              <h5 class="card-title">Would you get the vaccine if the FDA approved it for general, non-emergency use?</h5>
-              
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-two-answer-one').removeClass('d-none');
-                  $('#question-two-yes').removeClass('d-none');
-                  $('#continue-three').removeClass('d-none');
-                  return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" id="question-two-yes">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  Yes
-                </a>
-              </li>
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-three').removeClass('d-none');
-                  $('#question-two-no').removeClass('d-none');
-                  return false;
-                "><span class="checkmark mr-2 d-none" id="question-two-no">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  No</a>
-              </li>
-            </ul>
-
-            <div class="card-body px-4 mx-4 pb-5 d-none" id="question-two-answer-one">
-              <span class="pointing">👇</span>
-              <p><strong>You should know</strong><br/>The FDA <strong>approved</strong> the Pfizer-BioNTech COVID-19 Vaccine for non-emergency use on August 23, 2021. <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/full-fda-approval-of-a-covid-19-vaccine-what-you-should-know" target="_new">Read about the FDA approval and what it shows about the safety of this vaccine</a> from the Johns Hopkins Medical Center, a source trusted by leading religious figures, Fox News, and Donald Trump.</p>
-              <button type="button" class="btn btn-primary">Find vaccines near me</button>
-            </div>
-
-          </div>
-
-          <!-- NEXT BUTTON -->
-
-          <div class="d-flex w-100 justify-content-center pt-5 d-none" id="continue-three">
-            <a href="#question-three" class="btn btn-dark" onclick="$('#question-three').removeClass('d-none'); $(this).parent().addClass('d-none'); return fales;">Continue anyway</a>
-          </div>
-
-
-          <!-- CARD -->
-          <div class="card w-100 mt-5 d-none" id="question-three">
-            <div class="card-body">
-              <h5 class="card-title">Do you trust the science behind these vaccines?</h5>
-              
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-four').removeClass('d-none');
-                  $('#question-three-yes').removeClass('d-none');
-                  return false;
-                "><span class="checkmark mr-2 d-none" id="question-three-yes">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  Yes, I want an exemption for another reason</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-three-answer-one').removeClass('d-none'); 
-                  $('#question-three-no-a').removeClass('d-none');
-                  $('#question-four').removeClass('d-none'); 
-                  return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" id="question-three-no-a">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  No, I believe they were developed too quickly
-                </a>
-              </li>
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-three-answer-two').removeClass('d-none'); 
-                  $('#question-three-no-b').removeClass('d-none');
-                  $('#question-four').removeClass('d-none'); return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" id="question-three-no-b">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  No, I heard they were developed using aborted fetuses
-                </a>
-              </li>
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-three-answer-three').removeClass('d-none'); 
-                  $(this).children(span).removeClass('d-none');
-                  $('#question-four').removeClass('d-none'); return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" id="question-three-no-c">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  No, I heard the virus was man-made
-                </a>
-              </li>
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-three-answer-two').removeClass('d-none'); 
-                  $('#question-three-no-c').removeClass('d-none');
-                  $('#question-four').removeClass('d-none'); return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" id="question-three-no-c">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  No, I generally distrust science
-                </a>
-              </li>
-              
-            </ul>
-
-            <div class="answer card-body px-4 mx-4 d-none" id="question-three-answer-one">
-              <span class="pointing">👇</span>
-              <p><strong>You should know</strong><br/>The church believes that science and religious at <em>not</em> at odds. If you are not yet sure of the safety and science behind the vaccines, you should consult the following trusted resources:</p>
-              <p class="quote px-4 pt-3">“[Some churches] have created a false dichotomy between faith and science. The truth is there is no conflict between true faith and true science. God uses science to bring about his purpose.”</p>
-              <div class="d-flex px-4 small mb-4 align-items-start">
-                <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
-                <p class="px-4 small mb-0"><strong>Pastor Robert Jeffress</strong><br/><span class="text-secondary">Lead pastor, First Baptist Church, Texas<br/>Faith advisor to Donald Trump and Fox News Contributor</span></p>
+              <div class="answer card-body px-4 mx-4 d-none" id="question-one-answer-two">
+                <span class="pointing">👇</span>
+                <p><strong>What sincrely held belief means in the law</strong><br/>This website is only for people who are seeking a sincere religious exception to Covid-19 vaccination requirements mandated by many state, federal, and private institutions and organizations. If you are worried about the saftey and validity of the vaccine, please consult these references trusted by many churches:</p>
+                <ul>
+                  <li>
+                    <p><a href="https://www.facebook.com/watch/?v=154247513123103" target="_new">Video interview with Pastor Robert Jeffers</a></p>
+                  </li>
+                  <li>
+                    <p><a href="https://www.ky3.com/2021/07/21/missouri-church-leaders-implore-congregants-get-vaccinated/" target="_new">Missouri Pastor Jeremy Johnson explains why the vaccine is safe</a></p>
+                  </li>
+                </ul>
               </div>
-              <ul>
-                <li><a href="#">Source</a></li>
+
+              <div class="answer card-body px-4 mx-4 d-none" id="question-one-answer-three">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>A sincrely held belief is defined in federal law as ...</p>
+                <ul>
+                  <li>
+                    <p><a href="https://www.facebook.com/watch/?v=154247513123103" target="_new">Video interview with Pastor Robert Jeffers</a></p>
+                  </li>
+                  <li>
+                    <p><a href="https://www.ky3.com/2021/07/21/missouri-church-leaders-implore-congregants-get-vaccinated/" target="_new">Missouri Pastor Jeremy Johnson explains why the vaccine is safe</a></p>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <!-- NEXT BUTTON -->
+            <div class="continue d-flex w-100 justify-content-center pt-5 d-none">
+              <a href="#question-two" class="btn btn-lg btn-dark" onclick="
+                  $(this).parent().parent().next('.card-wrapper').removeClass('d-none');
+                  $(this).parent().addClass('d-none'); 
+                  return fales;"
+                  >Continue anyway</a>
+            </div>
+
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="card-wrapper d-none" id="question-two">
+            <div class="card w-100 mt-5">
+              <div class="card-body">
+                <h4 class="card-title">Would you get the vaccine if the FDA approved it for general, non-emergency use?</h4>
+                
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" onclick="
+
+                    // WITH CONTINUE BUTTON 
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none');
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                    // Show continue button
+                    $(this).parent().parent().parent().find('.continue').removeClass('d-none');
+
+                    // Turn on this answer
+                    $('#question-two-answer-one').removeClass('d-none');              
+
+                    return false;
+                    "
+                  >
+                    <span class="checkmark mr-2 d-none" id="question-two-yes">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    Yes
+                </li>
+                <li class="list-group-item" onclick="
+
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none');
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                   
+                    return false;
+                  ">
+                    <span class="checkmark mr-2 d-none" id="question-two-no">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    No
+                </li>
               </ul>
+
+              <div class="card-body px-4 mx-4 pb-5 d-none" id="question-two-answer-one">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>The FDA <strong>approved</strong> the Pfizer-BioNTech COVID-19 Vaccine for non-emergency use on August 23, 2021. <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/full-fda-approval-of-a-covid-19-vaccine-what-you-should-know" target="_new">Read about the FDA approval and what it shows about the safety of this vaccine</a> from the Johns Hopkins Medical Center, a source trusted by leading religious figures, Fox News, and Donald Trump.</p>
+                <button type="button" class="btn btn-primary">Find vaccines near me</button>
+              </div>
+
             </div>
 
-            <div class="answer card-body px-4 mx-4 d-none" id="question-three-answer-two">
-              <span class="pointing">👇</span>
-              <p><strong>You should know</strong><br/>While it is true that a cell line derived from an elective abortion in 1972 has been used in the development of vaccines, <strong>no cells from aborted fetuses were used in the production of the Pfizer and Moderna vaccines.</strong> The church believes it is important to save human lives, and taking the vaccine is a morally acceptable and in fact important step to take to save human lives.</p>
-              <p class="quote px-4 pt-3">“We talk about life inside the womb being a gift from God. Well, life outside the womb is a gift from God, too… We need to do everything we can to protect the life God has given us.”</p>
-              <div class="d-flex px-4 small mb-4 align-items-start">
-                <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
-                <p class="px-4 small mb-0"><strong>Pastor Robert Jeffress</strong><br/><span class="text-secondary">Lead pastor, First Baptist Church, Texas<br/>Faith advisor to Donald Trump and Fox News Contributor</span></p>
-              </div>
-              <p class="quote px-4 pt-3">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
-              <div class="d-flex px-4 small mb-4 align-items-start">
-                <img src="assets/jeremy-johnson.jpg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
-                <p class="px-4 small mb-0"><strong>Pastor Jeremy Johnson</strong><br/><span class="text-secondary">Lead pastor of North Point Church, Missouri</span></p>
-              </div>
+            <!-- NEXT BUTTON -->
+            <div class="continue d-flex w-100 justify-content-center pt-5 d-none">
+              <a href="#question-three" class="btn btn-lg btn-dark" onclick="
+                  $(this).parent().parent().next('.card-wrapper').removeClass('d-none');
+                  $(this).parent().addClass('d-none'); 
+                  return fales;"
+                  >Continue anyway</a>
             </div>
 
           </div>
 
 
-          <!-- CARD -->
-          <div class="card w-100 mt-5 d-none" id="question-four">
-            <div class="card-body">
-              <h5 class="card-title">Do believe God will protect you from the virus, therfore you don't need the vaccine?</h5>
-              
-            </div>
-            <ul class="list-group list-group-flush">
-            
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-four-answer-one').removeClass('d-none'); 
-                  $('#question-four-yes').removeClass('d-none');
-                  $('#question-five').removeClass('d-none'); return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" id="question-four-yes">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                Yes, I believe God will protect me
-                </a>
-              </li>
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-four-answer-two').removeClass('d-none'); 
-                  $('#question-four-no').removeClass('d-none');
-                  $('#question-five').removeClass('d-none'); return false;
-                  "
-                >
-                  <span class="checkmark mr-2 d-none" id="question-four-no">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  No, that's not why I want an excemption
-                </a>
-              </li>
-              
-            </ul>
 
-            <div class="answer card-body px-4 mx-4 d-none" id="question-three-answer-one">
-              <span class="pointing">👇</span>
-              <p><strong>You should know</strong><br/>Religious leaders from every denomination believe God gave you an intellect to protect yourself and others in your community. You shouldn’t stop using the tools God gave you.</p>
-              <p class="quote px-4 pt-3">“God gave us both a sense of God's love and care and compassion, but he also gave us the brain and the opportunity to understand God's creation, which is nature, which includes things like viruses. And I think God expected us to use those gifts to understand how to protect ourselves and others from disease. If we have the opportunity to heal through medicine, I think God expects us to do that and not count on some supernatural intervention to come and save us when he's already given us the chance to be saved by other means.”</p>
-              <div class="d-flex px-4 small mb-4 align-items-start">
-                <img src="assets/francis-collins.jpeg" alt="Francis Collins" class="img-fluid profile profile-sm" />
-                <p class="px-4 small mb-0"><strong>Francis Collins</strong><br/><span class="text-secondary">Francis Collins, director of the National Institutes of Health<br/>Devout Christian, appointed by Donald Trump</span></p>
+
+          <!-- CARD 3 -->
+          <div class="card-wrapper d-none" id="question-three">
+            <div class="card w-100 mt-5">
+              <div class="card-body">
+                <h4 class="card-title">Do you trust the science behind these vaccines?</h4>
+                
               </div>
-              <ul>
-                <li><a href="#">Source</a></li>
+              <ul class="list-group list-group-flush">
+                
+                <li class="list-group-item" href="#" class="d-block" onclick="
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none'); 
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                    $('#question-three-no-a').removeClass('d-none');
+
+                    return false;
+                    "
+                  >
+                    <span class="checkmark mr-2 d-none" id="question-three-no-a">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    No, I believe they were developed too quickly
+                </li>
+                <li class="list-group-item" onclick="
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none'); 
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                    $('#question-three-no-b').removeClass('d-none');
+
+                    return false;
+                    "
+                  >
+                    <span class="checkmark mr-2 d-none" id="question-three-no-b">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    No, I heard they were developed using aborted fetuses
+                </li>
+                <li class="list-group-item" onclick="
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none'); 
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                    $('#question-three-no-c').removeClass('d-none');
+
+
+                    return false;
+                    "
+                  >
+                    <span class="checkmark mr-2 d-none" id="question-three-no-c">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    No, I heard the virus was man-made
+                </li>
+                <li class="list-group-item" onclick="
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none'); 
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                    $('#question-three-no-d').removeClass('d-none');
+                    
+                    return false;
+                    "
+                  >
+                    <span class="checkmark mr-2 d-none" id="question-three-no-d">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    No, I generally distrust science
+                </li>
+                <li class="list-group-item" onclick="
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none'); 
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this charckmark
+                    $(this).children('.checkmark').removeClass('d-none');
+
+                    $('#question-three-yes').removeClass('d-none');
+
+                    return false;
+                  "><span class="checkmark mr-2 d-none" id="question-three-yes">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    Yes, I want an exemption for another reason
+                </li>
               </ul>
-            </div>
 
+              <div class="answer card-body px-4 mx-4 d-none" id="question-three-no-a">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>The church believes that science and religious at <em>not</em> at odds. If you are not yet sure of the safety and science behind the vaccines, you should consult the following trusted resources:</p>
+                <p class="quote px-4 pt-3">“[Some churches] have created a false dichotomy between faith and science. The truth is there is no conflict between true faith and true science. God uses science to bring about his purpose.”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Pastor Robert Jeffress</strong><br/><span class="text-secondary">Lead pastor, First Baptist Church, Texas<br/>Faith advisor to Donald Trump and Fox News Contributor</span></p>
+                </div>
+                <ul>
+                  <li><a href="#">Source</a></li>
+                </ul>
+              </div>
+
+              <div class="answer card-body px-4 mx-4 d-none" id="question-three-no-a">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>While it is true that a cell line derived from an elective abortion in 1972 has been used in the development of vaccines, <strong>no cells from aborted fetuses were used in the production of the Pfizer and Moderna vaccines.</strong> The church believes it is important to save human lives, and taking the vaccine is a morally acceptable and in fact important step to take to save human lives.</p>
+                <p class="quote px-4 pt-3">“We talk about life inside the womb being a gift from God. Well, life outside the womb is a gift from God, too… We need to do everything we can to protect the life God has given us.”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Pastor Robert Jeffress</strong><br/><span class="text-secondary">Lead pastor, First Baptist Church, Texas<br/>Faith advisor to Donald Trump and Fox News Contributor</span></p>
+                </div>
+                <p class="quote px-4 pt-3">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/jeremy-johnson.jpg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Pastor Jeremy Johnson</strong><br/><span class="text-secondary">Lead pastor of North Point Church, Missouri</span></p>
+                </div>
+              </div>
+
+              <div class="answer card-body px-4 mx-4 d-none" id="question-three-no-b">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>While it is true that a cell line derived from an elective abortion in 1972 has been used in the development of vaccines, <strong>no cells from aborted fetuses were used in the production of the Pfizer and Moderna vaccines.</strong> The church believes it is important to save human lives, and taking the vaccine is a morally acceptable and in fact important step to take to save human lives.</p>
+                <p class="quote px-4 pt-3">“We talk about life inside the womb being a gift from God. Well, life outside the womb is a gift from God, too… We need to do everything we can to protect the life God has given us.”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Pastor Robert Jeffress</strong><br/><span class="text-secondary">Lead pastor, First Baptist Church, Texas<br/>Faith advisor to Donald Trump and Fox News Contributor</span></p>
+                </div>
+                <p class="quote px-4 pt-3">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/jeremy-johnson.jpg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Pastor Jeremy Johnson</strong><br/><span class="text-secondary">Lead pastor of North Point Church, Missouri</span></p>
+                </div>
+              </div>
+
+              <div class="answer card-body px-4 mx-4 d-none" id="question-three-no-c">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>While it is true that a cell line derived from an elective abortion in 1972 has been used in the development of vaccines, <strong>no cells from aborted fetuses were used in the production of the Pfizer and Moderna vaccines.</strong> The church believes it is important to save human lives, and taking the vaccine is a morally acceptable and in fact important step to take to save human lives.</p>
+                <p class="quote px-4 pt-3">“We talk about life inside the womb being a gift from God. Well, life outside the womb is a gift from God, too… We need to do everything we can to protect the life God has given us.”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/robert-jeffers.jpeg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Pastor Robert Jeffress</strong><br/><span class="text-secondary">Lead pastor, First Baptist Church, Texas<br/>Faith advisor to Donald Trump and Fox News Contributor</span></p>
+                </div>
+                <p class="quote px-4 pt-3">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/jeremy-johnson.jpg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Pastor Jeremy Johnson</strong><br/><span class="text-secondary">Lead pastor of North Point Church, Missouri</span></p>
+                </div>
+              </div>
+
+            </div>
+             <!-- NEXT BUTTON -->
+             <div class="continue d-flex w-100 justify-content-center pt-5 d-none">
+              <a href="#question-four" class="btn btn-lg btn-dark" onclick="
+                  $(this).parent().parent().next('.card-wrapper').removeClass('d-none');
+                  $(this).parent().addClass('d-none'); 
+                  return fales;"
+                  >Continue anyway</a>
+            </div>
+          </div>
+
+
+          <!-- CARD 4 -->
+          <div class="card-wrapper d-none" id="question-four">
+            <div class="card w-100 mt-5">
+              <div class="card-body">
+                <h4 class="card-title">Do believe God will protect you from the virus, therfore you don't need the vaccine?</h4>
+                
+              </div>
+              <ul class="list-group list-group-flush">
+              
+                <li class="list-group-item" onclick="
+
+                    // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none'); 
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this checkmark
+                    $(this).children('.checkmark').removeClass('d-none');
+                    
+                    // Turn on this answer
+                    $('#question-four-answer-one').removeClass('d-none'); 
+
+                    return false;
+                    "
+                  >
+                    <span class="checkmark mr-2 d-none" id="question-four-yes">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                  Yes, I believe God will protect me
+                </li>
+                <li class="list-group-item"  onclick="
+                     // Turn on next card
+                    $(this).parent().parent().parent().next('.card-wrapper').removeClass('d-none'); 
+
+                    // Turn off all answers in card
+                    $(this).parent().parent().children('.answer').addClass('d-none');
+                  
+                    // Turn off all checkmarks in card
+                    $(this).parent().find('.checkmark').addClass('d-none');
+
+                    // Turn on this checkmark
+                    $(this).children('.checkmark').removeClass('d-none');
+                    
+                    return false;
+                    "
+                  >
+                    <span class="checkmark mr-2 d-none" id="question-four-no">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    No, that's not why I want an excemption
+                </li>
+              </ul>
+              <div class="answer card-body px-4 mx-4 d-none" id="question-four-answer-one">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>Religious leaders from every denomination believe God gave you an intellect to protect yourself and others in your community. You shouldn’t stop using the tools God gave you.</p>
+                <p class="quote px-4 pt-3">“God gave us both a sense of God's love and care and compassion, but he also gave us the brain and the opportunity to understand God's creation, which is nature, which includes things like viruses. And I think God expected us to use those gifts to understand how to protect ourselves and others from disease. If we have the opportunity to heal through medicine, I think God expects us to do that and not count on some supernatural intervention to come and save us when he's already given us the chance to be saved by other means.”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/francis-collins.jpeg" alt="Francis Collins" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Francis Collins</strong><br/><span class="text-secondary">Francis Collins, director of the National Institutes of Health<br/>Devout Christian, appointed by Donald Trump</span></p>
+                </div>
+                <ul>
+                  <li><a href="#">Source</a></li>
+                </ul>
+              </div>
+
+             <!-- NEXT BUTTON -->
+             <div class="continue d-flex w-100 justify-content-center pt-5 d-none">
+              <a href="#question-five" class="btn btn-lg btn-dark" onclick="
+                  $(this).parent().parent().next('.card-wrapper').removeClass('d-none');
+                  $(this).parent().addClass('d-none'); 
+                  return fales;"
+                  >Continue anyway</a>
+            </div>
           </div>
 
 
           <!-- CARD -->
-          <div class="card w-100 mt-5 d-none" id="question-five">
-            <div class="card-body">
-              <h5 class="card-title">Do you believe the Biden administration is inhibiting your God-given freedoms by requiring you be vaccinated?</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-five-answer-one').removeClass('d-none');
-                  $('#question-five-yes').removeClass('d-none');
-                  $('#question-six').removeClass('d-none'); return false;
-                  "
-                >
-                  <span class="checkmark mr-2" id="question-four-yes">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  Yes
-                </a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">No</a>
-              </li>
-            </ul>
+          <div class="card-wrapper d-none" id="question-five">
+            <div class="card w-100 mt-5">
+              <div class="card-body">
+                <h4 class="card-title">Do you believe the Biden administration is inhibiting your God-given freedoms by requiring you be vaccinated?</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a href="#" class="d-block" onclick="
+                    $('#question-five-answer-one').removeClass('d-none');
+                    $('#question-five-yes').removeClass('d-none');
+                    $('#question-six').removeClass('d-none'); return false;
+                    "
+                  >
+                    <span class="checkmark mr-2" id="question-four-yes">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    Yes
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">No</a>
+                </li>
+              </ul>
 
-            <div class="card-body  px-4 mx-4" id="question-five-answer-one">
-              <span class="pointing">👇</span>
-              <p><strong>You should know</strong><br/>Answer</p>
-             
+              <div class="card-body  px-4 mx-4" id="question-five-answer-one">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>Answer</p>
+              
+            </div>
+
+             <!-- NEXT BUTTON -->
+             <div class="continue d-flex w-100 justify-content-center pt-5 d-none">
+              <a href="#question-six" class="btn btn-lg btn-dark" onclick="
+                  $(this).parent().parent().next('.card-wrapper').removeClass('d-none');
+                  $(this).parent().addClass('d-none'); 
+                  return fales;"
+                  >Continue anyway</a>
             </div>
 
           </div>
 
 
            <!-- CARD -->
-           <div class="card w-100 mt-5 d-none" id="question-six">
-            <div class="card-body">
-              <h5 class="card-title">Do you believe getting vaccinated is a personal decision?</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a href="#" class="d-block" onclick="
-                  $('#question-six-answer-one').removeClass('d-none');
-                  $('#question-six-yes').removeClass('d-none');
-                  $('#question-seven').removeClass('d-none'); return false;
-                  "
-                >
-                  <span class="checkmark mr-2" id="question-four-yes">
-                    <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
-                  </span>
-                  Yes, it's a personal choice
-                </a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">No, I need to take the community into consideration</a>
-              </li>
-            </ul>
-
-            <div class="card-body  px-4 mx-4" id="question-six-answer-one">
-              <span class="pointing">👇</span>
-              <p><strong>You should know</strong><br/>When dealing with an outbreak of an infectious disease, it isn't only about you. There's a societal responsibility that we all have. </p>
-              <p class="quote px-4 pt-3">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
-              <div class="d-flex px-4 small mb-4 align-items-start">
-                <img src="assets/jeremy-johnson.jpg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
-                <p class="px-4 small mb-0"><strong>Pastor Jeremy Johnson</strong><br/><span class="text-secondary">Lead pastor of North Point Church, Missouri</span></p>
+           <div class="card-wrapper d-none" id="question-six">
+            <div class="card w-100 mt-5">
+              <div class="card-body">
+                <h4 class="card-title">Do you believe getting vaccinated is a personal decision?</h4>
               </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a href="#" class="d-block" onclick="
+                    $('#question-six-answer-one').removeClass('d-none');
+                    $('#question-six-yes').removeClass('d-none');
+                    $('#question-seven').removeClass('d-none'); return false;
+                    "
+                  >
+                    <span class="checkmark mr-2" id="question-four-yes">
+                      <img src="assets/check_circle_black_24dp.svg" alt="checkmark">
+                    </span>
+                    Yes, it's a personal choice
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">No, I need to take the community into consideration</a>
+                </li>
+              </ul>
+
+              <div class="card-body  px-4 mx-4" id="question-six-answer-one">
+                <span class="pointing">👇</span>
+                <p><strong>You should know</strong><br/>When dealing with an outbreak of an infectious disease, it isn't only about you. There's a societal responsibility that we all have. </p>
+                <p class="quote px-4 pt-3">“Given their safety and availability, receiving a vaccine is an easy way of living out Jesus’s command to ‘love your neighbor as yourself,‘”</p>
+                <div class="d-flex px-4 small mb-4 align-items-start">
+                  <img src="assets/jeremy-johnson.jpg" alt="Pastor Robert Jeffress" class="img-fluid profile profile-sm" />
+                  <p class="px-4 small mb-0"><strong>Pastor Jeremy Johnson</strong><br/><span class="text-secondary">Lead pastor of North Point Church, Missouri</span></p>
+                </div>
             </div>
 
-            
+            <!-- NEXT BUTTON -->
+            <div class="continue d-flex w-100 justify-content-center pt-5 d-none">
+              <a href="#question-seven" class="btn btn-lg btn-dark" onclick="
+                  $(this).parent().parent().next('.card-wrapper').removeClass('d-none');
+                  $(this).parent().addClass('d-none'); 
+                  return fales;"
+                  >Continue anyway</a>
+            </div>
 
           </div>
 
@@ -499,7 +677,7 @@
       <div class="container">
         <hr class="col-3 col-md-2 mb-5">
 
-        Created by Sahadeva Hammari
+        <p class="small">Questions? Email <a href="mailto:help@covidreligiousexemption.com">help@ovidreligiousexemption.com</a></p>
 
       </div>
     </footer>

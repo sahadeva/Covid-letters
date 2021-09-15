@@ -1,11 +1,18 @@
 body {
-  background-color: #FFDE03;
+  background-color: #F8E9D8;
   font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-h5 {
-  font-size: 22px;
+
+h1 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 3.8rem;;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 35px;
 }
 
 hr {
@@ -13,11 +20,6 @@ hr {
   opacity: 1;
 }
 
-
-h1 {
-  font-family: 'MedievalSharp', cursive;
-  font-size: 3.4rem;;
-}
 
 .pointing {
   font-size: 3rem;
@@ -43,7 +45,7 @@ h1 {
 .list-group {
   color: #000;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 20px;
  }
 
   .list-group-item:hover {
@@ -63,7 +65,14 @@ h1 {
   font-weight: bold;
 }
 
-.btn-primary {
-  background-color: #00d54b;
-  border-color: #00d54b;
+.card {
+  border-radius: 12px;
+  border: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+  padding-bottom: .5rem;
+}
+
+.list-group-flush>.list-group-item {
+  border-width: 1px 0;
+  margin-top: -1px;
 }

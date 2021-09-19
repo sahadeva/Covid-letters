@@ -6,7 +6,7 @@ body {
 
 
 h1 {
-  font-family: 'MedievalSharp', cursive;
+  font-family: 'Gideon Roman', cursive;
   font-size: 3.8rem;;
 }
 
@@ -74,5 +74,15 @@ hr {
 
 .list-group-flush>.list-group-item {
   border-width: 1px 0;
-  margin-top: -1px;
+  margin-bottom: -1px;
 }
+
+img.final-answer {
+  margin-top: -3.25rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 5px rgba(0,0,0,.3);
+  width: 72px; 
+  height: 72px;
+}
+
+

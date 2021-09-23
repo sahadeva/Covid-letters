@@ -6,8 +6,10 @@ body {
 
 
 h1 {
-  font-family: 'Gideon Roman', cursive;
-  font-size: 3.8rem;;
+  font-family: 'IM Fell English', cursive;
+  font-size: 4.5rem;;
+  line-height: 110%;
+  color: #000;
 }
 
 h4 {

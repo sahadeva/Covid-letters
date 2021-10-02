@@ -59,7 +59,7 @@ $(document).ready(function() {
     $('#question-3-a').click(function() { $('#question-three-no-a').removeClass('d-none'); });
     $('#question-3-b').click(function() { $('#question-three-no-b').removeClass('d-none'); });
     $('#question-3-c').click(function() { $('#question-three-no-c').removeClass('d-none'); });
-    $('#question-3-d').click(function() { $('#question-three-no-d').removeClass('d-none'); });
+    $('#question-3-e').click(function() { $('#question-three-no-e').removeClass('d-none'); });
 
     $('#question-4-a').click(function() { $('#question-four-answer-one').removeClass('d-none'); });
 
@@ -67,4 +67,23 @@ $(document).ready(function() {
 
     $('#question-6-a').click(function() { $('#question-six-answer-one').removeClass('d-none'); });
 
+    $('#question-7-a').click(function() { $('#question-seven-answer-one').removeClass('d-none'); });
+
+    $('#question-8-a').click(function() { $('#question-eight-answer-one').removeClass('d-none'); });
+
+    $('#question-9-a').click(function() { $('#question-nine-answer-one').removeClass('d-none'); });
+
+
 }); 
+
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+    FB.init({
+      appId: '1367636646972840',
+      version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+    });     
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+    FB.getLoginStatus(updateStatusCallback);
+  });
+});

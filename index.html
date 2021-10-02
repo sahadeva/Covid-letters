@@ -589,19 +589,18 @@ fjs.parentNode.insertBefore(js, fjs);
             </div>
               
              <!-- NEXT BUTTON -->
-            <div class="continue d-flex  w-100 pt-5">
+            <div class="continue d-flex w-100 pt-5">
               <div class="w-100 d-flex flex-column align-items-center">
                 <h4 class="mb-3">Survey completed</h4>
-                <a href="#answers" class="btn btn-lg btn-success" id="answers-toggle" data-toggle="modal" data-target="#shareModal">See if I qualify</a>
+                <a href="#answers" id="results-button" class="btn btn-lg btn-success" id="answers-toggle" data-toggle="modal" 
+                  data-target="#shareModal"
+                  onClick="$('#next-instructions').addClass('d-none');"
+                >See if I qualify</a>
              </div>
             </div>
 
            
           </div>
-
-          
-
-
 
           
           <!-- Share Modal -->
@@ -614,22 +613,27 @@ fjs.parentNode.insertBefore(js, fjs);
                     <span style="font-size: 27px;;">🙏</span>
                     <h5 class="modal-title" id="shareModalLabel">Please, share this resource first!</h5>
                   </div>
-
-
                   <a 
                     href="https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2Fcovidreligiousexemption.com&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer" 
-                    class="btn btn-primary btn-lg btn-block mb-4">Share on Facebook</a> 
-                  <button class="btn btn-primary btn-lg btn-block mb-4">Share on Twitter</button> 
+                    class="fb-share btn btn-primary btn-lg btn-block mb-4"
+                    data-toggle="modal" data-target="#shareModal"
+                    >Share on Facebook</a> 
                   <p class="text-center my-3">Then</p>
-                  <a href="#" class="btn btn-lg btn-success btn-block mb-4" onClick="
-                  if (
-                    $('#answers').hasClass('god-yes')
-                  ) {
-                    $('#answer-yes').removeClass('d-none');
-                  } else {
-                    $('#answer-no').removeClass('d-none');
-                  };
-                  return false;
+                  <a href="#" class="btn btn-lg btn-success btn-block mb-4" 
+                  
+                    data-toggle="modal" data-target="#shareModal"
+
+                    onClick="
+                    $('#results-button').addClass('d-none');
+                    if (
+                      $('#answers').hasClass('god-yes')
+                    ) {
+                      $('#answer-yes').removeClass('d-none');
+                    } else {
+                      $('#answer-no').removeClass('d-none');
+                    };
+                    
+                    return false;
                 ">See my results</a>
                 </div>
                 

@@ -35,10 +35,15 @@ $(document).ready(function() {
 
     }); 
 
-    $('.show-continue').click(function() {
-
     // Show continue button
+    $('.show-continue').click(function() {
       $(this).parent().parent().parent().find('.continue').removeClass('d-none');
+
+    }); 
+
+    // Hide continue button
+    $('.show-next-card').click(function() {
+      $(this).parent().parent().parent().find('.continue').addClass('d-none');
 
     }); 
 

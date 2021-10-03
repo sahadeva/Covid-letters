@@ -13,7 +13,6 @@ $(document).ready(function() {
 
       
       if ($(this).hasClass('god-yes')) {
-        $('#answers').addClass('god-yes');
       }
        else {
         $('#answers').removeClass('god-yes');
